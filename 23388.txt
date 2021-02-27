@@ -1,0 +1,31 @@
+23388 :--
+   
+  #include<stdio.h>
+void main() {
+	int arr[20];
+	int j =0, N, pos;
+	printf("Enter the number of elements in the array: ");
+	scanf("%d",&N);
+	for (j = 0; j < N; j++) {
+		printf("Enter element %d: ", j+1);
+		scanf("%d", &arr[j]);
+	}
+	printf("Enter the index to delete an element: ");
+	scanf("%d", &pos);
+	printf("Before deletion: ");
+	for (j = 0; j < N; j++) {
+		printf("%d\t",arr[j]);
+	}
+	printf("\n");
+	for(j=pos;j<N-1;j++)
+	{
+		arr[j]=arr[j+1];
+	}
+	N=N-1;
+	
+	printf("After deletion: ");
+	for (j = 0; j < N; j++) {
+		printf("%d\t",arr[j]);
+	}
+	printf("\n");
+}
